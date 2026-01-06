@@ -1,0 +1,217 @@
+/* Estilos para el Movies-container de la página principal */
+
+.movies-container {
+  padding: 40px;
+}
+
+.movies-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  
+  gap: 20px;  
+}
+
+.movies-empty {
+  display: none;
+  
+  text-align: center;
+  
+  font-family: "Stack Sans Text", sans-serif;
+  font-size: 18px;
+  color: rgba(255, 255, 255, 0.5);
+  
+  padding: 60px 20px;
+}
+
+.movies-empty.active {
+  display: block;
+}
+
+.movie-card {
+  position: relative;
+  
+  width: calc((100% - 80px) / 5);
+  aspect-ratio: 2/3;
+
+  border-radius: 15px;
+  border: 2px solid rgba(255, 255, 255, 0.1);
+  
+  overflow: hidden;
+  
+  cursor: pointer;
+  
+  transition: all 0.3s ease;
+}
+
+.movie-card:hover {
+  box-shadow: 0 10px 30px rgba(255, 0, 0, 0.3);
+  border-color: rgba(255, 0, 0, 0.6);
+  
+  transform: scale(1.05);
+}
+
+.movie-card-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.movie-card:hover .movie-card-image {
+  filter: brightness(0.3);
+}
+
+.movie-card-info {
+  position: absolute;
+  top: 0;
+  left: 0;
+ 
+  width: 100%;
+  height: auto;
+  min-height: 60%;
+  
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  height: 100%;
+  
+  opacity: 0;
+
+  padding: 8px 12px;
+  
+  transition: all 0.3s ease;
+}
+
+.movie-card:hover .movie-card-info {
+  opacity: 1;
+}
+
+.movie-card-title {
+  font-family: "Pacifico", cursive;
+  font-size: 32px;
+  color: white;
+
+  text-shadow: 0 0 10px rgba(255, 0, 0, 0.8);
+  
+  margin-bottom: 10px;
+}
+
+.movie-card-details {
+  display: flex;
+  flex-direction: column;
+  
+  gap: 0;
+  align-items: center;
+}
+
+.movie-card-detail {
+  font-family: "Stack Sans Text", sans-serif;
+  font-size: 20px;
+  color: rgba(255, 255, 255, 0.9);
+  margin-bottom: 0;
+  text-align: center;
+}
+
+.movie-card-detail span {
+  color: rgb(255, 0, 0);
+  font-weight: bold;
+  text-decoration: underline;
+}
+
+.movie-card-delete {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  
+  width: 30px;
+  height: 30px;
+
+  background: rgba(255, 0, 0, 0.8);
+
+  border: none;
+  border-radius: 50%;
+
+  color: white;
+  font-size: 16px;
+
+  cursor: pointer;
+
+  opacity: 0;
+
+  transition: all 0.3s ease;
+}
+
+.movie-card:hover .movie-card-delete {
+  opacity: 1;
+}
+
+.movie-card-delete:hover {
+  background: rgb(255, 0, 0);
+  
+  transform: scale(1.1);
+}
+
+.movie-card-edit {
+  font-family: "Stack Sans Text", sans-serif;
+  font-size: 12px;
+  font-weight: bold;
+  color: white;
+
+  background: linear-gradient(135deg, rgb(255, 0, 0), rgb(204, 0, 0));
+
+  border: none;
+  border-radius: 20px;
+
+  opacity: 0;
+
+  padding: 8px 20px;
+  margin-top: 15px;
+
+  cursor: pointer;
+
+  transition: all 0.3s ease;
+}
+
+.movie-card:hover .movie-card-edit {
+  opacity: 1;
+}
+
+.movie-card-edit:hover {
+  box-shadow: 0 4px 15px rgba(255, 0, 0, 0.5);
+  transform: scale(1.1);
+}
+
+/* ==== RESPONSIVE ==== */
+@media (max-width: 1200px) {
+  .movie-card {
+    width: calc((100% - 60px) / 4);
+  }
+}
+
+@media (max-width: 992px) {
+  .movie-card {
+    width: calc((100% - 40px) / 3);
+  }
+}
+
+@media (max-width: 768px) {
+  .movies-container {
+    padding: 20px;
+  }
+
+  .movie-card {
+    width: calc((100% - 20px) / 2);
+  }
+}
+
+@media (max-width: 480px) {
+  .movie-card {
+    width: 100%;
+  }
+}
