@@ -1,0 +1,234 @@
+<header class="header">
+  <div class="header-left-section">
+    <button class="header-return-btn">
+      <a href="index.html">
+        <img src="/return.svg" alt="Volver">
+      </a>
+    </button>
+  </div>
+   <div class="header-center-section">
+    <h1 class="header-title">eFilm</h1>
+    <p class="header-description">Administra tu catálogo de películas</p>
+  </div>
+  <div class="header-right-section">
+    <button class="header-info-btn" id="toggleInfoBtn">
+      <img src="/info-outline.svg" alt="Info">
+    </button>
+  </div>
+</header>
+
+<style>
+  .header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    height: 100px;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+
+    background: linear-gradient(180deg, rgba(0, 0, 0, 0.9) 0%, rgba(0, 0, 0, 0.7) 100%);
+    backdrop-filter: blur(10px);
+    
+    border-bottom: 1px solid rgba(255, 0, 0, 0.3);
+    
+    padding: 20px 40px;
+  }
+
+  /* ==== LEFT SECTION ===== */
+  .header-left-section {
+    flex: 1;
+    display: flex;
+    justify-content: flex-start;
+  }
+
+  .header-return-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+    background: transparent;
+    
+    border: 2px solid rgb(225, 225, 225);
+    border-radius: 50%;
+    
+    width: 50px;
+    height: 50px;
+    
+    cursor: pointer;
+    
+    transition: all 0.3s ease;
+  }
+
+  .header-return-btn a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .header-return-btn img {
+    width: 24px;
+    height: 24px;
+    
+    filter: brightness(0) invert(1);
+    
+    opacity: 0.7;
+    
+    transition: all 0.3s ease;
+  }
+
+  .header-return-btn:hover {
+    border-color: rgba(255, 0, 0, 0.6);
+    background: rgba(255, 0, 0, 0.1);
+    
+    transform: scale(1.1);
+  }
+
+  .header-return-btn:hover img {
+    opacity: 1;
+  }
+
+  /* ==== CENTER SECTION ==== */
+  .header-center-section {
+    flex: 2;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .header-title {
+    font-family: "Pacifico", cursive;
+    font-size: 48px;
+    color: white;
+    text-shadow: 
+      0 0 10px rgba(255, 0, 0, 0.8),
+      0 0 20px rgba(255, 0, 0, 0.6),
+      0 0 30px rgba(255, 0, 0, 0.4),
+      0 2px 4px rgba(0, 0, 0, 0.5);
+    letter-spacing: 2px;
+    
+    margin-bottom: 2px;
+  }
+
+  .header-description {
+    font-family: "Stack Sans Text", sans-serif;
+    font-size: 14px;
+    font-weight: 300;
+    color: rgba(255, 255, 255, 0.7);
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    
+    position: relative;
+    
+    padding: 0 20px;
+    margin-top: 0;
+  }
+
+  .header-description::before,
+  .header-description::after {
+    content: "";
+    
+    position: absolute;
+    top: 50%;
+    width: 30px;
+    height: 1px;
+    
+    background: linear-gradient(90deg, transparent, rgba(255, 0, 0, 0.6), transparent);
+  }
+
+  .header-description::before {
+    left: -20px;
+  }
+
+  .header-description::after {
+    right: -20px;
+  }
+
+  /* ==== RIGHT SECTION ==== */
+  .header-right-section {
+    flex: 1;
+    display: flex;
+    justify-content: flex-end;
+  }
+
+  .header-info-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 50px;
+    height: 50px;
+    
+    background: transparent;
+    
+    border: 2px solid rgb(225, 225, 225);
+    border-radius: 50%;
+    
+    cursor: pointer;
+    
+    transition: all 0.3s ease;
+  }
+
+  .header-info-btn a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .header-info-btn img {
+    width: 24px;
+    height: 24px;
+    
+    filter: brightness(0) invert(1);
+    
+    opacity: 0.7;
+    
+    transition: all 0.3s ease;
+  }
+
+  .header-info-btn:hover {
+    border-color: rgba(255, 0, 0, 0.6);
+    background: rgba(255, 0, 0, 0.1);
+    
+    transform: scale(1.1);
+  }
+
+  .header-info-btn:hover img {
+    opacity: 1;
+  }
+
+  /* ==== RESPONSIVE ==== */
+  @media (max-width: 768px) {
+    .header {
+      padding: 15px 20px;
+    }
+
+    .header-title {
+      font-size: 32px;
+    }
+
+    .header-description {
+      font-size: 10px;
+      letter-spacing: 2px;
+    }
+
+    .header-description::before,
+    .header-description::after {
+      display: none;
+    }
+
+    .header-return-btn,
+    .header-info-btn {
+      width: 40px;
+      height: 40px;
+    }
+
+    .header-return-btn img,
+    .header-info-btn img {
+      width: 20px;
+      height: 20px;
+    }
+  }
+</style>

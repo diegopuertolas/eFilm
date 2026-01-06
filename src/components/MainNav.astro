@@ -1,0 +1,127 @@
+<nav class="nav">
+   <div class="nav-search">
+    <input type="text" class="nav-search-input" placeholder="Buscar películas..." id="searchInput">
+  </div>
+  <div class="nav-actions">
+    <button class="nav-add-btn" id="toggleFormBtn">Añadir Película</button>
+  </div>
+</nav>
+
+<style>
+  
+  .nav {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    gap: 60px;
+    
+    background: rgba(0, 0, 0, 0.5);
+
+    padding: 20px 40px;
+    margin-top: 20px;
+  }
+
+  .nav-search {
+    flex: 0 1 500px;
+  }
+
+  .nav-search-input {
+    width: 100%;
+
+    font-family: "Stack Sans Text", sans-serif;
+    font-size: 16px;
+    color: white;
+
+    background: rgba(255, 255, 255, 0.1);
+
+    border: 2px solid rgba(255, 255, 255, 0.2);
+    border-radius: 50px;
+
+    outline: none;
+
+    padding: 14px 20px;
+
+    transition: all 0.3s ease;
+  }
+
+  .nav-search-input::placeholder {
+    color: rgba(255, 255, 255, 0.5);
+  }
+
+  .nav-search-input:focus {
+    background: rgba(255, 255, 255, 0.15);
+    border-color: rgba(255, 0, 0, 0.6);
+    box-shadow: 0 0 20px rgba(255, 0, 0, 0.2);
+  }
+
+  .nav-actions {
+    margin-left: 0;
+  }
+
+  .nav-add-btn {
+    font-family: "Stack Sans Text", sans-serif;
+    font-size: 16px;
+    font-weight: bold;
+    color: white;
+    letter-spacing: 1px;
+
+    background: linear-gradient(135deg, rgb(255,0,0), rgb(204, 0, 0));
+    box-shadow: 0 4px 15px rgba(255, 0, 0, 0.3);
+
+    border: 2px solid rgba(255, 255, 255, 0.3);
+    border-radius: 50px;
+
+    cursor: pointer;
+    
+    padding: 14px 30px;
+
+    transition: all 0.3s ease;
+  }
+
+  .nav-add-btn:hover {
+    box-shadow: 0 6px 25px rgba(255, 0, 0, 0.5);
+    background: linear-gradient(135deg, rgb(255, 32, 32), rgb(238, 0, 0));
+
+    transform: translateY(-2px);
+  }
+
+  .nav-add-btn.cancel {
+    background: transparent;
+    border-color: rgba(255, 0, 0, 0.6);
+    box-shadow: none;
+    
+    color: rgb(255,0,0);  
+  }
+
+  .nav-add-btn.cancel:hover {
+    background: rgba(255, 0, 0, 0.1);
+    box-shadow: 0 4px 15px rgba(255, 0, 0, 0.2);
+  }
+
+  /* ==== RESPONSIVE ==== */
+  @media (max-width: 768px) {
+    .nav {
+      flex-direction: column;
+      gap: 15px;
+      padding: 15px 20px;
+    }
+
+    .nav-search {
+      flex: 1;
+      width: 100%;
+    }
+
+    .nav-search,
+    .nav-actions {
+      width: 100%;
+    }
+
+    .nav-search-input,
+    .nav-add-btn {
+      width: 100%;
+      box-sizing: border-box;
+    }
+  }
+
+</style>
