@@ -1,46 +1,32 @@
-# Astro Starter Kit: Basics
+# 🎬 eFilm - Gestor de Películas
 
-```sh
-pnpm create astro@latest -- --template basics
+![Astro](https://img.shields.io/badge/Astro-BC52EE?style=for-the-badge&logo=astro&logoColor=white)
+![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black)
+![CSS3](https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white)
+
+Una aplicación web moderna para gestionar tu catálogo personal de películas. Añade, edita, elimina y busca películas de forma intuitiva con una interfaz elegante y responsive.
+
+---
+
+## 🛠️ Tecnologías utilizadas
+
+- [Astro](https://astro.build/) - Framework principal
+- HTML5, CSS3, JavaScript (ES6+)
+- LocalStorage para persistencia de datos
+- [PNPM](https://pnpm.io/) para gestión de dependencias
+
+
+## 📁 Estructura del proyecto
+
+```
+src/
+  components/      # Componentes Astro reutilizables
+  layouts/         # Layouts principales
+  pages/           # Rutas de la aplicación
+  assets/          # Imágenes, scripts y estilos globales
+public/            # Archivos estáticos
 ```
 
-> 🧑‍🚀 **Seasoned astronaut?** Delete this file. Have fun!
+## 👨‍💻 Autor
 
-## 🚀 Project Structure
-
-Inside of your Astro project, you'll see the following folders and files:
-
-```text
-/
-├── public/
-│   └── favicon.svg
-├── src
-│   ├── assets
-│   │   └── astro.svg
-│   ├── components
-│   │   └── Welcome.astro
-│   ├── layouts
-│   │   └── Layout.astro
-│   └── pages
-│       └── index.astro
-└── package.json
-```
-
-To learn more about the folder structure of an Astro project, refer to [our guide on project structure](https://docs.astro.build/en/basics/project-structure/).
-
-## 🧞 Commands
-
-All commands are run from the root of the project, from a terminal:
-
-| Command                   | Action                                           |
-| :------------------------ | :----------------------------------------------- |
-| `pnpm install`             | Installs dependencies                            |
-| `pnpm dev`             | Starts local dev server at `localhost:4321`      |
-| `pnpm build`           | Build your production site to `./dist/`          |
-| `pnpm preview`         | Preview your build locally, before deploying     |
-| `pnpm astro ...`       | Run CLI commands like `astro add`, `astro check` |
-| `pnpm astro -- --help` | Get help using the Astro CLI                     |
-
-## 👀 Want to learn more?
-
-Feel free to check [our documentation](https://docs.astro.build) or jump into our [Discord server](https://astro.build/chat).
+Diego Puértolas Ruiz
