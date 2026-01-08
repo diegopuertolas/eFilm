@@ -29,4 +29,4 @@ public/            # Archivos estáticos
 
 ## 👨‍💻 Autor
 
-Diego Puértolas Ruiz
+Diego Puértolas Ruiz 1SW
