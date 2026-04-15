@@ -34,4 +34,8 @@ public/            # Archivos estáticos
 
 ---
 
+<<<<<<< HEAD
 *Diego Puértolas Ruiz*
+=======
+Diego Puértolas Ruiz 1SW
+>>>>>>> main
